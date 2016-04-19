@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Blog</title>
+        <link rel="stylesheet" href="/static/css/stylesheet.css">
+    </head>
+    <body>
+        <div  class="wrapper">
+            <h1>Django Blog</h1>
+            {% for key, value in posts.items %}
+                <a href="{{ value.slug }}"><h3>{{ value.title }}</h3></a>
+                <i>{{ value.date }}</i>
+                <p id="text_cut">{{ value.text }}</p>
+            {% endfor %}
+        </div>
+    </body>
+</html>

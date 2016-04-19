@@ -2,8 +2,15 @@
 
 {% block body_block %}
 
-    <h1>Hi Django!</h1>
-    <p>{{ string }}</p>
+    <h1>Hi Django!
+        <img src="http://blog.ittestsonline.com/wp-content/uploads/2015/04/djangopony.png" height="100" align="right"/>
+    </h1>
+
+    <p><br/><br/><br/>{{ messages }}</p>
+
+    <div id="frame">
+        <a id="button" href="{% url 'blog' %}">Blog posts</a>
+    </div>
     <!-- <ul>
         {% for message in messages %}
             <li><p>{{ message }}</p></li>

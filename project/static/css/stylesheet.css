@@ -1,5 +1,5 @@
 .wrapper {
-    width: 500px;
+    width: 650px;
     margin: 0 auto;
     font-family: sans-serif;
     font-size: 16px;
@@ -7,4 +7,43 @@
 
 li {
     list-style: none;
+}
+
+body {
+    background-color: #D8F6CE
+}
+
+h1 {
+    color: #0B3B0B
+}
+
+h3 {
+    color: #0B3B0B
+}
+
+a {
+    text-decoration: none;
+    color: #D8F6CE;
+
+}
+
+p {
+    text-decoration: none;
+    color:black;
+
+}
+
+#frame {
+    width: 75px;
+    background-color: #0B3B0B;
+    border-radius: 5px;
+    margin: auto;
+    padding: 20px 20px 20px 20px
+}
+
+#text_cut {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    max-width: 50ch;
 }

@@ -1,0 +1,14 @@
+{
+    "post1": {"title": "Change many files",
+        "date":"2016-05-18 13:03:09",
+        "text":"The hamlet we are working on contains five files. In Git, it's common to change many files, add those files to the staging area, and commit them to Git in a single commit."
+    },
+    "post2": {"title": "Staging area",
+        "date":"2016-05-20 13:23:50",
+        "text":"Great! The files you've added to the staging area belong in the same commit. Git is a software that allows you to keep track of changes made to a project over time. Git works by recording the changes you make to a project, storing those changes, then allowing you to reference them as needed. We'll learn Git by using it to help us write a screenplay called Harry Programmer and the Sorcerer's Code."
+    },
+    "post3": {"title": "Hamlet",
+        "date":"2016-06-20 13:23:50",
+        "text":"Though yet of Hamlet our dear brother's death. Git is a software that allows you to keep track of changes made to a project over time. Git works by recording the changes you make to a project, storing those changes, then allowing you to reference them as needed. We'll learn Git by using it to help us write a screenplay called Harry Programmer and the Sorcerer's Code."
+    }
+}
