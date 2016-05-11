@@ -4,8 +4,6 @@ from django.shortcuts import render
 from config.settings.base import DJANGO_ROOT
 from dateutil.parser import parse
 
-# from django.template.defaultfilters import slugify
-# from .models import Message
 
 def publish_date(json_date):
     date = parse(json_date)
@@ -38,26 +36,10 @@ def post_slug(slug):
             select_post = item
     return select_post
 
-#def post_slug(slug):
-#    for item in data_posts:
-#        if data_posts[item]['slug'] == slug:
-#            select_post = data_posts[item]
-#    return select_post
-
-
-# for item in data_posts:
-#    data_posts[item]['slug'] = slugify(data_posts[item]['title'])
-
 
 def home(request):
     context_dict = {'messages' : home_data}
     return render(request, 'starter_app/home.html', context_dict)
-
-        # messages = Message.objects.order_by('order')
-        # messages = ['Első', 'Második', 'Harmadik']
-        # context_dict = {
-            # 'messages': messages
-        # }
 
 
 def blog(request):
@@ -68,14 +50,6 @@ def blog(request):
 def post(request, slug):
     context_dict = post_slug(slug)
     return render(request, 'post.html', context_dict)
-
-    # url_slug = str(request)[26:-3]
-    # for item in data_posts:
-        # if url_slug == data_posts[item]['slug']:
-            #posts = {'title' : data_posts[item]['title'],
-                    # 'date' : data_posts[item]['date'],
-                    # 'text' : data_posts[item]['text']}
-
 
 home_data = read_home_json()
 data_posts = read_blog_json()
