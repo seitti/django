@@ -4,14 +4,23 @@
     font-family: sans-serif;
     font-size: 16px;
     text-align: justify;
+    background-color: #D8F6CE
 }
 
+#text_cut {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    max-width: 80ch;
+}
+
+#reading_more {
+    color: #0B3B0B;
+    font-size: 12px;
+    float: right;
+}
 li {
     list-style: none;
-}
-
-body {
-    background-color: #D8F6CE
 }
 
 h1 {
@@ -31,25 +40,4 @@ p {
     text-decoration: none;
     color:black;
 
-}
-
-#frame {
-    width: 75px;
-    background-color: #0B3B0B;
-    border-radius: 5px;
-    margin: auto;
-    padding: 20px 20px 20px 20px
-}
-
-#text_cut {
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow: ellipsis;
-    max-width: 80ch;
-}
-
-#reading_more {
-    color: #0B3B0B;
-    font-size: 12px;
-    float: right;
 }

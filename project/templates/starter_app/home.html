@@ -6,15 +6,12 @@
         <img src="http://blog.ittestsonline.com/wp-content/uploads/2015/04/djangopony.png" height="100" align="right"/>
     </h1>
 
-    <p><br/><br/><br/>{{ messages }}</p>
-
-    <div id="frame">
-        <a id="button" href="{% url 'blog' %}">Blog posts</a>
-    </div>
-    <!-- <ul>
-        {% for message in messages %}
-            <li><p>{{ message }}</p></li>
+    <div>
+        {% for item in posts %}
+            <a href="{{ item.slug }}"><h3>{{ item.title }}</h3></a>
+            <i>{{ item.date }}</i>
+            <p id="text_cut">{{ item.text }}</p>
+            <a href="{{ item.slug }}" id="reading_more"><b>Read more</b>
         {% endfor %}
-    </ul> -->
-
+    </div>
 {% endblock %}
