@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 
 {% block body_block %}
+    <figure>
+        <img  id="picture" src="http://blog.ittestsonline.com/wp-content/uploads/2015/04/djangopony.png" />
+    </figure>
 
-    <h1>Hi Django!
-        <img src="http://blog.ittestsonline.com/wp-content/uploads/2015/04/djangopony.png" height="100" align="right"/>
-    </h1>
+    <h1>Hi Django!</h1>
 
     <div>
-        {% for item in posts %}
+        {% for item in posts|dictsort:"date" reversed %}
             <a href="{{ item.slug }}"><h3>{{ item.title }}</h3></a>
             <i>{{ item.date }}</i>
             <p id="text_cut">{{ item.text }}</p>

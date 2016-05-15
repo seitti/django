@@ -1,0 +1,14 @@
+{% block body_block %}
+
+    <ul>
+        <h2><a href="{% url 'home'%}"> Menu </a></h2>
+        {% for item in posts|dictsort:"date" reversed %}
+            {% if item.slug == selected_post.slug  %}
+                <li><strong href="{% url 'post' item.slug %}">{{ item.title }}</strong></li>
+            {% else %}
+                <li><a href="{% url 'post' item.slug %}">{{ item.title }}</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="/static/css/stylesheet.css">
 </head>
 
-<body class="wrapper">
-    <div>
+<body>
+    <div class="menu_list">
+        {% include "starter_app/menu_in_blog.html" %}
+    </div>
+    <div class="blog_body">
         {% block body_block %}{% endblock %}
     </div>
 </body>
