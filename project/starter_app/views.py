@@ -24,12 +24,12 @@ def get_post_by_slug(slug):
 
 
 def home(request):
-    context_dict = {'posts' : homepage}
+    context_dict = {'selected_post': None, 'posts': homepage}
     return render(request, 'starter_app/home.html', context_dict)
 
 
 def post(request, slug):
-    context_dict = {'selected_post' : get_post_by_slug(slug), 'posts' : homepage}
+    context_dict = {'selected_post': get_post_by_slug(slug), 'posts': homepage}
     return render(request, 'starter_app/post.html', context_dict)
 
 

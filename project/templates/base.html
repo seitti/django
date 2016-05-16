@@ -1,4 +1,6 @@
 <!doctype html>
+{% load blog_tags %}
+
 <html>
 
 <head>
@@ -9,7 +11,7 @@
 
 <body>
     <div class="menu_list">
-        {% include "starter_app/menu_in_blog.html" %}
+        {% total_posts %}
     </div>
     <div class="blog_body">
         {% block body_block %}{% endblock %}
