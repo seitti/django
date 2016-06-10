@@ -1,12 +1,11 @@
 from django import template
-from .. import views
+from ..views import home_data
 
 register = template.Library()
 
-@register.inclusion_tag('starter_app/menu_in_blog.html', takes_context=True)
-def total_posts(context):
+@register.inclusion_tag('starter_app/menu_in_blog.html')
+def generate_menu(selected_post=None):
     return {
-        'posts': context['posts'],
-        'selected_post': context['selected_post']
+        'posts': home_data,
+        'selected_post': selected_post
         }
-#total_posts 

@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
 
+{% load blog_tags %}
+
+{% block menu_block %}
+   {% generate_menu %}
+{% endblock %}
+
 {% block body_block %}
+
     <figure>
         <img id="picture" src="http://blog.ittestsonline.com/wp-content/uploads/2015/04/djangopony.png"/>
     </figure>
@@ -15,4 +22,5 @@
             <a href="{% url 'post' item.slug %}" id="reading_more"><b>Read more</b>
         {% endfor %}
     </div>
+
 {% endblock %}

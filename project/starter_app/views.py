@@ -23,8 +23,7 @@ def get_post_by_slug(slug):
 
 
 def home(request):
-    context_dict = {'selected_post': None,
-                    'posts': home_data}
+    context_dict = {'posts': home_data}
     return render(request, 'starter_app/home.html', context_dict)
 
 
