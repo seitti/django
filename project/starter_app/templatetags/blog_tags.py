@@ -9,3 +9,4 @@ def total_posts(context):
         'posts': context['posts'],
         'selected_post': context['selected_post']
         }
+#total_posts 

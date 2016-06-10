@@ -1,16 +1,22 @@
-[{"title": "Change many files",
-  "slug" : "change-many-files",
-  "date":"2016-05-18T13:03:09",
-  "text":"The hamlet we are working on contains five files. In Git, it's common to change many files, add those files to the staging area, and commit them to Git in a single commit."
+[
+    {
+      "title": "Change many files",
+      "slug" : "change-many-files",
+      "date": "2016-05-18T13:03:09",
+      "text": "The hamlet we are working on contains five files. In Git, it's common to change many files, add those files to the staging area, and commit them to Git in a single commit."
     },
-  {"title": "Staging area",
-  "slug" : "stanging-area",
-  "date":"2015-05-05T20:23:50",
-  "text":"Great! The files you've added to the staging area belong in the same commit. Git is a software that allows you to keep track of changes made to a project over time. Git works by recording the changes you make to a project, storing those changes, then allowing you to reference them as needed. We'll learn Git by using it to help us write a screenplay called Harry Programmer and the Sorcerer's Code."
+
+    {
+      "title": "Staging area",
+      "slug" : "stanging-area",
+      "date": "2015-05-05T20:23:50",
+      "text": "Great! The files you've added to the staging area belong in the same commit. Git is a software that allows you to keep track of changes made to a project over time. Git works by recording the changes you make to a project, storing those changes, then allowing you to reference them as needed. We'll learn Git by using it to help us write a screenplay called Harry Programmer and the Sorcerer's Code."
     },
-  {"title": "Hamlet",
-  "slug" : "hamlet",
-  "date":"2016-02-20T13:23:50",
-  "text":"Though yet of Hamlet our dear brother's death. Git is a software that allows you to keep track of changes made to a project over time. Git works by recording the changes you make to a project, storing those changes, then allowing you to reference them as needed. We'll learn Git by using it to help us write a screenplay called Harry Programmer and the Sorcerer's Code."
+
+    {
+      "title": "Hamlet",
+      "slug" : "hamlet",
+      "date": "2016-02-20T13:23:50",
+      "text": "Though yet of Hamlet our dear brother's death. Git is a software that allows you to keep track of changes made to a project over time. Git works by recording the changes you make to a project, storing those changes, then allowing you to reference them as needed. We'll learn Git by using it to help us write a screenplay called Harry Programmer and the Sorcerer's Code."
     }
 ]

@@ -1,7 +1,7 @@
 import json, os
+import dateutil.parser
 from django.shortcuts import render
 from config.settings.base import DJANGO_ROOT
-from dateutil.parser import parse
 
 
 def read_blog_homepage():
@@ -11,26 +11,27 @@ def read_blog_homepage():
     file_posts.close()
 
     for item in data_posts_json:
-        item['date'] = parse(item['date'])
+        item['date'] = dateutil.parser.parse(item['date'])
 
     return data_posts_json
 
 
 def get_post_by_slug(slug):
-    for item in homepage:
+    for item in home_data:
         if item['slug'] == slug:
-            select_post = item
-    return select_post
+            return item
 
 
 def home(request):
-    context_dict = {'selected_post': None, 'posts': homepage}
+    context_dict = {'selected_post': None,
+                    'posts': home_data}
     return render(request, 'starter_app/home.html', context_dict)
 
 
 def post(request, slug):
-    context_dict = {'selected_post': get_post_by_slug(slug), 'posts': homepage}
+    context_dict = {'selected_post': get_post_by_slug(slug),
+                    'posts': home_data}
     return render(request, 'starter_app/post.html', context_dict)
 
 
-homepage = read_blog_homepage()
+home_data = read_blog_homepage()
