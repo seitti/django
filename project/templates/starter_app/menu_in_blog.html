@@ -3,12 +3,22 @@
 {% block menu_block %}
 
     <ul>
-        <h2><a href="{% url 'home'%}"> Menu </a></h2>
+        <form action="{% url 'home'%}">
+            <input id="menu_button" type="submit" value="Menu">
+        </form>
         {% for item in posts|dictsort:"date" reversed %}
             {% if item.slug == selected_post.slug  %}
-                <li><strong href="{% url 'post' item.slug %}">{{ item.title }}</strong></li>
+                <li>
+                    <form action="{% url 'post' item.slug %}">
+                        <input id="selected_title" type="submit" value= "{{ item.title }}">
+                    </form>
+                </li>
             {% else %}
-                <li><a href="{% url 'post' item.slug %}">{{ item.title }}</a></li>
+                <li>
+                    <form action="{% url 'post' item.slug %}">
+                        <input type="submit" value= "{{ item.title }}">
+                    </form>
+                </li>
             {% endif %}
         {% endfor %}
     </ul>
